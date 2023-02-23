@@ -165,6 +165,8 @@ public class Player : MonoBehaviour
 
 
 
+
+
             GameManager gmLogic = gameMgrObj.GetComponent<GameManager>();
             if (life == 0)
             {
@@ -175,6 +177,36 @@ public class Player : MonoBehaviour
                 gmLogic.RespawnPlayer();
             }
             gameObject.SetActive(false);
+
+            if (life == 0)
+            {
+                Time.timeScale = 0;
+            }
+            
+
+        else if(collision.gameObject.tag == "Item")
+            {
+                Item item = collision.gameObject.GetComponent<Item>();
+                switch (item.type)
+                {
+                    case "cherry":
+                        score += 2;
+                        break;
+                    case "starryberry":
+                        score += 3;
+                        break;
+                    case "watermelon":
+                        score += 4; 
+                        break;
+
+                }
+                gameObject.SetActive(false);
+            }
+
+
+
+
+           
         }
     }
 

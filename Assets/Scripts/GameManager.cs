@@ -66,16 +66,22 @@ public class GameManager : MonoBehaviour
 
             Player playerscore = player.GetComponent<Player>();
 
-            
+
             scoreText.text = "SCORE:" + (int)playerscore.score;
 
             Player lifeText = player.GetComponent<Player>();
 
             LifeText.text = "LIFE:" + (int)lifeText.life;
-
-
-            
         }
+
+       
+      if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene("SampleScene");
+            }
+        
+            
+       
         
 
     }
@@ -117,6 +123,8 @@ public class GameManager : MonoBehaviour
 
 
     }
+
+
     void Delayplayer()
     {
         player.GetComponent<PolygonCollider2D>().enabled = true;
