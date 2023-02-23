@@ -7,8 +7,9 @@ public class Player : MonoBehaviour
     public float speed = 0f;
 
     public float power = 0f;
+    bool test = false;
 
-    
+
 
     public float life = 3f;
     public bool isHit = false;
