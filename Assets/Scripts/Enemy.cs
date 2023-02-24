@@ -124,7 +124,7 @@ public class Enemy : MonoBehaviour
 
             //random
             int random = Random.Range(0, 10);
-            if (random < 5) {
+            if (random < 3) {
                 Debug.Log("Not item");
             }
             else if (random < 8)

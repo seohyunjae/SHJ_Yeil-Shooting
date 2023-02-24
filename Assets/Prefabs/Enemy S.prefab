@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feefc5fd1c5e9054994834dc0df02011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  health: 20
+  speed: 7
+  health: 9
   enemyscore: 0
   cherry: {fileID: 7940564092915390335, guid: 4f7ded39982ccd049b158ffaf5d7f538, type: 3}
   starryberry: {fileID: 5163542270938725519, guid: 6766cc2d862543f41ba5cbdde74982e8, type: 3}

@@ -163,10 +163,6 @@ public class Player : MonoBehaviour
             life--;
 
 
-
-
-
-
             GameManager gmLogic = gameMgrObj.GetComponent<GameManager>();
             if (life == 0)
             {
@@ -182,31 +178,29 @@ public class Player : MonoBehaviour
             {
                 Time.timeScale = 0;
             }
-            
 
-        else if(collision.gameObject.tag == "Item")
+
+        }
+        if (collision.gameObject.tag == "item")
+        {
+            Item item = collision.gameObject.GetComponent<Item>();
+            switch (item.type)
             {
-                Item item = collision.gameObject.GetComponent<Item>();
-                switch (item.type)
-                {
-                    case "cherry":
-                        score += 2;
-                        break;
-                    case "starryberry":
-                        score += 3;
-                        break;
-                    case "watermelon":
-                        score += 4; 
-                        break;
+                case "cherry":
+                    score += 2;
+                    break;
+                case "starryberry":
+                    score += 3;
+                    break;
+                case "watermelon":
+                    score += 4;
+                    break;
 
-                }
-                gameObject.SetActive(false);
+            
             }
-
-
-
-
            
+
+
         }
     }
 
